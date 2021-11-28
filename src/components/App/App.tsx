@@ -1,24 +1,22 @@
 import React from 'react';
+import { IntlProvider } from 'react-intl';
 import './App.css';
+import intlLib from '../../resources/intl'
+import AppContent from '../AppContent/AppContent';
+import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
+  const defaultLocale = 'en'
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Here is the test branch <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IntlProvider
+      locale={defaultLocale}
+      defaultLocale={defaultLocale}
+      messages={intlLib[defaultLocale]}
+    >
+      <CssBaseline />
+      <AppContent />
+    </IntlProvider>
   );
 }
 
