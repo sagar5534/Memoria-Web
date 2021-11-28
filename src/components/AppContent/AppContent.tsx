@@ -1,20 +1,14 @@
 import React from "react";
 import AppBar from "../AppBar/AppBar";
-import NavBar from "../NavBar/NavBar";
 import Body from "../Body/Body";
-import { Box, CssBaseline } from "@mui/material";
+import { Box } from "@mui/material";
 
 function AppContent() {
-  const [open, setOpen] = React.useState(true);
 
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-
-      <AppBar open={open} setOpen={setOpen} />
-      <NavBar open={open} />
-      <Body open={open} />
-      
+      <AppBar />
+      <Body />
     </Box>
   );
 }
