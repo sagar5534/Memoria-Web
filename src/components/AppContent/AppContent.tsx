@@ -6,10 +6,10 @@ import { Box } from "@mui/material";
 function AppContent() {
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <AppBar />
-      <Body />
-    </Box>
+      <Box sx={{ display: "flex" }}>
+        <AppBar />
+        <Body />
+      </Box>
   );
 }
 

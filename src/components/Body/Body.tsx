@@ -1,48 +1,53 @@
-import * as React from "react";
-import { Box, Typography } from "@mui/material";
+import React from "react";
+import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { Routes, Route, Link } from "react-router-dom";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
-  justifyContent: "flex-end"
+  justifyContent: "flex-end",
 }));
 
-const Body = () => {
+function Home() {
+  return (
+    <>
+      <main>
+        <h2>Welcome to the homepage!</h2>
+        <p>You can do this, I believe in you.</p>
+      </main>
+      <nav>
+        <Link to="/about">About</Link>
+      </nav>
+    </>
+  );
+}
 
+function About() {
+  return (
+    <>
+      <main>
+        <h2>Who are we?</h2>
+        <p>That feels like an existential question, don't you think?</p>
+      </main>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
+    </>
+  );
+}
+
+const Body = () => {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-    <DrawerHeader />
-    <Typography paragraph>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-      enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-      imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-      Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-      Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-      adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-      nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-      leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-      feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-      consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-      sapien faucibus et molestie ac.
-    </Typography>
-    <Typography paragraph>
-      Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-      eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-      neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-      tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-      sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-      tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-      gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-      et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-      tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-      eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-      posuere sollicitudin aliquam ultrices sagittis orci a.
-    </Typography>
-  </Box>
+      <DrawerHeader />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="users" element={<About />} />
+      </Routes>
+    </Box>
   );
 };
 

@@ -4,8 +4,9 @@ import "./App.css";
 import intlLib from "../../resources/intl";
 import AppContent from "../AppContent/AppContent";
 import CssBaseline from "@mui/material/CssBaseline";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { red } from "@mui/material/colors";
+import { BrowserRouter } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -24,9 +25,11 @@ function App() {
       defaultLocale={defaultLocale}
       messages={intlLib[defaultLocale]}
     >
-      <ThemeProvider theme={theme}>        
+      <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppContent />
+        <BrowserRouter>
+          <AppContent />
+        </BrowserRouter>
       </ThemeProvider>
     </IntlProvider>
   );
