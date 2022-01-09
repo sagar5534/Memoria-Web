@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Routes, Route, Link } from "react-router-dom";
+import UsersDash from "../UsersDash/UsersDash";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -25,27 +26,13 @@ function Home() {
   );
 }
 
-function About() {
-  return (
-    <>
-      <main>
-        <h2>Who are we?</h2>
-        <p>That feels like an existential question, don't you think?</p>
-      </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-    </>
-  );
-}
-
 const Body = () => {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <DrawerHeader />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="users" element={<About />} />
+        <Route path="users" element={<UsersDash />} />
       </Routes>
     </Box>
   );
