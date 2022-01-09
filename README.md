@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="./assets/Memoria_Logo_Github.png" width="500">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Securely back-up your photos and videos to your own servers and enjoy them from anywhere.
 
-## Available Scripts
+## Why try it out?
 
-In the project directory, you can run:
+* :left_right_arrow: **Automatic Sync:** You can store your photos and videos on a server of your choosing.
 
-### `npm start`
+* 🙌 **All your photos, on all your devices:** Access every photo and video in your library — from any device, anytime you want.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* 🔒 **Designed to keep your photos private:** with our encryption mechanisms & JWT Authorization.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Upcoming Features
 
-### `npm test`
+* 🔒 **Accessibility:** Access your photos and videos directly from the browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* 📸 **No Limitations:** Upcoming Support for more media types — Live Photos, Portaits & Slow Motion
 
-### `npm run build`
+## Development Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Ensure you have a Memoria-Core running on an internet accessible server
+* 💻 [Install Core Service](https://github.com/sagar5534/Memoria-Core)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Bring up the app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ```bash
+  npm i && npm run start
+  ```
 
-### `npm run eject`
+## Join the team 👪
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+There are many ways to contribute, of which development is only one! Find out [how to get involved](https://discord.gg/zTN6hEPH9u), including designers, testers, helping others and much more!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact us
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you want to contact us, e.g. before starting a more complex feature, for questions
+you can join us at the links below: http
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* [💬 Join the Discord](https://discord.gg/zTN6hEPH9u)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## :scroll: License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Memoria is [GPL-3.0](LICENSE) Licensed.
